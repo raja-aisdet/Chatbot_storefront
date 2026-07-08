@@ -1,0 +1,34 @@
+query ProductListPaginated(
+	$first: Int
+	$after: String
+	$last: Int
+	$before: String
+	$channel: String!
+	$languageCode: LanguageCodeEnum!
+	$sortBy: ProductOrder
+	$filter: ProductFilterInput
+) {
+	products(
+		first: $first
+		after: $after
+		last: $last
+		before: $before
+		channel: $channel
+		sortBy: $sortBy
+		filter: $filter
+	) {
+		totalCount
+		edges {
+			node {
+				...ProductListItem
+			}
+			cursor
+		}
+		pageInfo {
+			hasNextPage
+			hasPreviousPage
+			startCursor
+			endCursor
+		}
+	}
+}
