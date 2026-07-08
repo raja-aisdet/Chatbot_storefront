@@ -29,7 +29,7 @@
 
 ## Contributors
 
-- Raja Aisdet — chatbot integration and storefront improvements
+- RAJA — chatbot integration and storefront improvements
 
 ---
 
